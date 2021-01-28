@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "229120893276",
+    "project_id": "notepad-28e4c",
+    "storage_bucket": "notepad-28e4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:229120893276:android:2a4d442520abfb92c9a199",
+        "android_client_info": {
+          "package_name": "com.clidio.notepad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "229120893276-k66l4lv5t8qm24mejpb47crds1bokirr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiLyFs_H9cxZySiRzSFE0pZToKqFoc7vg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "229120893276-k66l4lv5t8qm24mejpb47crds1bokirr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
