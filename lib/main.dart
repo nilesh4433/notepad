@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notepad/view/home.dart';
-import 'widget/inherited_widget.dart';
+import 'package:notepad/widget/inherited_widget.dart';
 
 void main() => runApp(NotepadApp());
 
@@ -15,4 +15,3 @@ class NotepadApp extends StatelessWidget {
     );
   }
 }
-

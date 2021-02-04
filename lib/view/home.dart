@@ -8,6 +8,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
   List<Map<String, String>> get _notes => NoteInheritedWidget.of(context).notes;
 
   @override
@@ -20,35 +21,30 @@ class _HomeScreenState extends State<HomeScreen> {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => NewNote(NoteMode.Editing))
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => Note(NoteMode.Editing))
                 );
               },
               child: Card(
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                      top: 25.0, bottom: 25.0, left: 10.0, right: 15.0),
+                  padding: const EdgeInsets.fromLTRB(13.0, 30.0, 22.0, 30.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       _NoteTitle(_notes[index]['title']),
                       Container(height: 4,),
-                      _NoteText(_notes[index]['text']),
+                      _NoteText(_notes[index]['text'])
                     ],
                   ),
                 ),
               ),
             );
-          }
-          itemCount: _notes.length,
+          },
+        itemCount: _notes.length,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => NewNote(NoteMode.Adding))
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Note(NoteMode.Adding))
           );
         },
         child: Icon(Icons.add),
@@ -57,11 +53,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-
-
 class _NoteTitle extends StatelessWidget {
   final String _title;
+
   _NoteTitle(this._title);
+
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -76,17 +72,18 @@ class _NoteTitle extends StatelessWidget {
 
 class _NoteText extends StatelessWidget {
   final String _text;
+
   _NoteText(this._text);
+
   @override
   Widget build(BuildContext context) {
     return Text(
       _text,
       style: TextStyle(
-        color: Colors.grey,
+          color: Colors.grey.shade900
       ),
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
     );
   }
 }
-
